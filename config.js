@@ -1857,15 +1857,7 @@ if (isMedia) {
             client.deleteMessage(quotedMsgObj.chatId, quotedMsgObj.id, false)
             break
 
-
-        case 'tela':
-           
-            const sesPic = await kill.getSnapshot()
-            kill.sendFile(from, sesPic, 'session.png', 'Neh...', id)
-            break
-			
-
-        case 'enviar':
+            case 'enviar':
             const arka = body.trim().substring(body.indexOf(' ') + 1)
             if (args.length == 0) return kill.reply(from, 'Necesitas definir entre [-gp, -pv ou -help] para usar!', id)
 			const gid = groupId.replace('@g.us', '').replace('c.us', '')
